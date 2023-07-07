@@ -9,6 +9,11 @@
  * };
  */
 
+//brute force: merge the two lists into a new list
+//TC: O(n1+ n2), SC: O(n1+ n2)
+
+//optimized space: l1 denotes the smaller element list and l2 the bigger, swap if not the case and keep changing the link
+//TC: O(n1+ n2), SC: O(1)
 //method 1: recursion
 class Solution {
 public:
