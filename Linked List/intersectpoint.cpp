@@ -7,7 +7,16 @@
  * };
  */
 
-//method 1
+//brute force: traverse in one list and for each element check address in the second list
+//TC: O(n1* n2), SC: O(1)
+
+//using hash table: store the address of any one list, traverse in other and see if address is present in hash
+//TC: O(n1+ n2), SC: O(n1) or O(n2) depending on which lists address is stored
+
+//optimized method 1
+//count length of list let them be n1, n2 traverse n1- n2 distance in bigger list
+//then traverse both list together and see where d1== d2 and return
+//TC: O(max(n1, n2))+ O(n1-n2)+ O(min(n1, n2)), worst: O(2* max(n1, n2)) for no intersection node, SC: O(1)
 class Solution {
 public:
     ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
@@ -46,7 +55,10 @@ public:
     }
 };
 
-//method 2
+//optimized method 2
+//d1 and d2 pointers traverse in two lists respectively and other list when any one becomes NULL, this way the list difference is covered
+//no intersection node means d1 and d2 are NULL
+//TC: O(2* max(n1, n2)), SC: O(1)
 class Solution {
 public:
     ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
