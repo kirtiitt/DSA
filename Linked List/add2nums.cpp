@@ -11,6 +11,8 @@
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        //sum is calculated as sum% 10, the last digit and carry as sum/ 10 i.e. first digit (only 2 digit number in sum, always)
+        //TC: O(max(n1, n2)), SC: O(n) for new list containing ans
         ListNode *head= NULL, *temp= NULL;
         int carry= 0;
         while(l1|| l2|| carry) {
