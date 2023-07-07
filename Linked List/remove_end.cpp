@@ -16,7 +16,7 @@ public:
     ListNode* removeNthFromEnd(ListNode* head, int n) {
         //optimized: f moves for n and then s and f move till list exists i.e. f->next
         //then s->next= s->next->next i.e. delete node
-        //TC: O(n), SC:O (1)
+        //TC: O(n), SC: O (1)
         ListNode *d= new ListNode();
         d->next= head;
         ListNode *f= d, *s=d;
