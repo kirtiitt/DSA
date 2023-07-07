@@ -8,9 +8,15 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
+
+//brute force: hash the first half list value and then compare with the other half list
+//TC: O(n), SC: O(n/2)
+
 class Solution {
 public:
     bool isPalindrome(ListNode* head) {
+        //optimized: find middle, then reverse the other half list and finally compare
+        //TC: O(n/2)+ O(n/2)+ O(n/2), SC: O(1)
         if(head==NULL || head->next==NULL)
             return 1;
         ListNode *s=head, *f=head;
