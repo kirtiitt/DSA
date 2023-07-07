@@ -10,7 +10,13 @@
  */
 class Solution {
 public:
+    //brute force: count the length, say size. move size- n and then d->next= d->next->next
+    //edge case: first node to be deleted when n==c
+    //TC: O(n)+ O(n), SC: O(1)
     ListNode* removeNthFromEnd(ListNode* head, int n) {
+        //optimized: f moves for n and then s and f move till list exists i.e. f->next
+        //then s->next= s->next->next i.e. delete node
+        //TC: O(n), SC:O (1)
         ListNode *d= new ListNode();
         d->next= head;
         ListNode *f= d, *s=d;
