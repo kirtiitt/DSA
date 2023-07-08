@@ -1,4 +1,4 @@
-//TC: O(3n), SC: O(3n) each node is visited thrice and stored thrice with count 1, 2, 3 resp for order traversal
+//TC: O(3n), SC: O(4n) (3 traversal, 1 stack) each node is visited thrice and stored thrice with count 1, 2, 3 resp for order traversal
 
 void Traversal (Node *root, vector<int> &pre, vector<int> &in, vector<int> &post) {
     if(root==NULL)  return;
