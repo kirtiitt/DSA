@@ -19,3 +19,5 @@ public:
         return ans;
     }
 };
+
+//one other way too, how three and four sum is done with the help of left and right pointers, it can work directly here
