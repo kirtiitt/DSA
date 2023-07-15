@@ -10,6 +10,7 @@
  * };
  */
 
+//insert given node at leaf
 //TC: O(log n), SC: O(1)
 class Solution {
 public:
